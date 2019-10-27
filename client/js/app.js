@@ -3,7 +3,6 @@ class EventsManager {
         this.obtenerDataInicial()
     }
 
-
     obtenerDataInicial() {
         let url = '../server/getEvents.php'
         $.ajax({

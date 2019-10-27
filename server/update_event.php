@@ -1,4 +1,6 @@
 <?php
+session_start();
+if($_SESSION['userid']){
     require('./db.php');
     $id = $_POST['id'];
     $startDate = $_POST['start_date'];
@@ -12,5 +14,5 @@
     $response['msg']='OK';
     echo json_encode($response);
     $conexion->cerrarConexion();
-
+    }
  ?>

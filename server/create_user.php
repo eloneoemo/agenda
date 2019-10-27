@@ -1,6 +1,5 @@
 <?php
 require('./db.php');
-
 class NewUsuario {
     private $nombre;
     private $pssw;
@@ -17,9 +16,7 @@ class NewUsuario {
     function crearUsuario (){
         return 'INSERT INTO usuarios (`nombre`, `pssw`, `correo`, `fecha_nacimiento`) VALUES ("'.$this->nombre.'","'.$this->password.'","'.$this->correo.'","'.$this->fechaDeNacimiento.'");';        
     }
-
 }
-
 $usuario = new NewUsuario('Juan Almonte',md5('1234'),'juan@yahoo.com','1993-05-10');
 $peticionUsuarioA = $usuario->crearUsuario();
 $respuestaServer = $conexion->ejecutarQuery($peticionUsuarioA);
@@ -33,6 +30,6 @@ $peticionUsuarioC = $usuarioC->crearUsuario();
 $respuestaServer = $conexion->ejecutarQuery($peticionUsuarioC);
 
 
-
+echo 'Usuarios creados con éxito!';
 
 ?>

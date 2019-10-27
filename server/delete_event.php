@@ -1,4 +1,6 @@
 <?php
+session_start();
+if($_SESSION['userid']){
 require('./db.php');
     $id = $_POST['id'];
     $query = 'DELETE FROM `eventos` WHERE `eventos`.`id`='.$id.';';
@@ -6,4 +8,5 @@ require('./db.php');
     $response['msg']='OK';
     echo json_encode($response);
     $conexion->cerrarConexion();
+}
  ?>
