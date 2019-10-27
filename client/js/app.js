@@ -68,6 +68,8 @@ class EventsManager {
     }
 
     anadirEvento(){
+      var a = $('#start_date').val()+" "+$('#start_hour').val();
+
       var form_data = new FormData();
       form_data.append('titulo', $('#titulo').val())
       form_data.append('start_date', $('#start_date').val())
@@ -105,6 +107,8 @@ class EventsManager {
                 allDay: false,
                 end: $('#end_date').val()+" "+$('#end_hour').val()
               })
+
+
             }
           }else {
             alert(data.msg)

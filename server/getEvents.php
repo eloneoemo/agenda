@@ -14,6 +14,5 @@ if($_SESSION['userid']){
     }else{
         $array['msg']= "Actualmente no hay registros";
     }
-    $conexion->cerrarConexion();
-}
+    $conexion->cerrarConexion();}
  ?>

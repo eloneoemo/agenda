@@ -1,6 +1,6 @@
 <?php
     require('./db.php');
-    $peticion = ('SELECT * FROM usuarios WHERE correo="'.$_POST['username'].'" AND pssw="'.$_POST['password'].'";');
+    $peticion = ('SELECT * FROM usuarios WHERE correo="'.$_POST['username'].'" AND pssw="'.md5($_POST['password']).'";');
     $respuestaServer = $conexion->ejecutarQuery($peticion);
     if($respuestaServer->num_rows!=0){
         session_start();
