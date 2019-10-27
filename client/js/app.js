@@ -106,10 +106,6 @@ class EventsManager {
                 end: $('#end_date').val()+" "+$('#end_hour').val()
               })
             }
-
-
-
-
           }else {
             alert(data.msg)
           }
@@ -122,7 +118,6 @@ class EventsManager {
     }
 
     eliminarEvento(event, jsEvent){
-
       var form_data = new FormData()
       form_data.append('id', event.id)
       $.ajax({
